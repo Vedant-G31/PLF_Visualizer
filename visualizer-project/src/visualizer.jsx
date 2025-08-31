@@ -4,7 +4,6 @@ import { Stage, Layer, Rect, Circle, Image, Shape, Text } from 'react-konva';
 import TableofTheaters from './tableOftheaters';
 import TableofProjDetails from './projectionDetails';
 import Video from './filmProjection';
-import Person from './person'
 
 import MIF_AR from './images/MIF_AR.mp4';
 import tdkIMAX from './images/tdkIMAXtrim.mp4'
@@ -12,11 +11,6 @@ import tdkIMAX from './images/tdkIMAXtrim.mp4'
 
 
 import useImage from 'use-image';
-import brstill1 from './images/brstill1.jpg';
-import dune_dcp from './images/dune_dcp.jpg';
-import duneLaser from './images/duneLaser.jpg';
-import duneImax from './images/duneImax.jpg';
-import seatstrs from './images/seatstrs.png';
 
 
 function convertStrtoNumbers (num) {
@@ -81,9 +75,6 @@ function Visualizer() {
       window.removeEventListener('resize', updateSize);
     };
   }, []);
-
-  const [auditoriumImage] = useImage(seatstrs);
-
 
   /*every 10 units is 1 ft?*/
   return (

@@ -6,13 +6,17 @@ import LandingPage from './Landing'
 import ARExamples from './visualExamples'
 import Visualizer from './visualizer'
 
+
 function App() {
   const [count, setCount] = useState(0)
   return (
     <>
+   
       <LandingPage></LandingPage>
       <ARExamples></ARExamples>
       <Visualizer></Visualizer>
+  
+
     </>
   )
 }

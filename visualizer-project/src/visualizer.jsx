@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import './Landing.css'
+
 import { Stage, Layer, Rect, Circle, Image, Shape, Text } from 'react-konva';
 import TableofTheaters from './tableOftheaters';
 import TableofProjDetails from './projectionDetails';
@@ -79,15 +79,15 @@ function Visualizer() {
   /*every 10 units is 1 ft?*/
   return (
     <>
-      <div class="flex min-h-screen justify-center bg-linear-to-r from-[#06224F] to-[#0091FF] flex-col lg:flex-row font-sans">
-        <div class="flex flex-col justify-center flex-shrink lg:flex-grow items-center text-white shadow-xl/40">
-          <h1 class="flex p-4 font-bold text-2xl">List of Theaters (Canada)</h1>
-          <div class="flex pl-4 pr-4 pb-4">
+      <div className="flex min-h-screen justify-center bg-[#051E36] flex-col lg:flex-row font-sans">
+        <div className="flex flex-col justify-center flex-shrink lg:flex-grow items-center text-white shadow-xl/40">
+          <h1 className="flex p-4 font-bold text-2xl">List of Theaters (Canada)</h1>
+          <div className="flex pl-4 pr-4 pb-4">
               <TableofTheaters theaterSelected={scName} onTheaterHeight={setScreenHeight} onTheaterWidth={setScreenWidth} onTheaterName={setScreenName} onAspectRatio={setAspectRatio}></TableofTheaters>
           </div>
         </div>
-        <div class="flex flex-col flex-shrink lg:flex-grow items-center justify-center bg-[#071c38] text-white shadow-xl/40 pl-4 pr-4 pt-8">
-          {/* <div><h1 class="flex p-4 font-bold text-2xl">{scName}</h1></div> */}
+        <div className="flex flex-col flex-shrink lg:flex-grow items-center justify-center bg-[#00060A] text-white shadow-xl/40 pl-4 pr-4 pt-8">
+          {/* <div><h1 className="flex p-4 font-bold text-2xl">{scName}</h1></div> */}
                 <Stage width={screenWidth + 10} height={70}>
                   <Layer>
                       <Text
@@ -154,9 +154,9 @@ function Visualizer() {
 
                   
                 </Stage>
-            {/* <h1 class="flex flex-wrap p-4 max-width-20 text-10" style={!displayMovie ? {display:"none"} : {display:"block"}}>Movie footage belongs to its respective copyright owners. This project is a non-commercial visualization tool intended to illustrate screen formats (1.90:1 vs 1.43:1) for educational purposes.</h1> */}
-            <div class="flex flex-row justify-center items-center">
-                <div class="p-4"><button onClick={() => {
+            {/* <h1 className="flex flex-wrap p-4 max-width-20 text-10" style={!displayMovie ? {display:"none"} : {display:"block"}}>Movie footage belongs to its respective copyright owners. This project is a non-commercial visualization tool intended to illustrate screen formats (1.90:1 vs 1.43:1) for educational purposes.</h1> */}
+            <div className="flex flex-row justify-center items-center">
+                <div className="p-4"><button onClick={() => {
                   if (!displayMovie && cropColor == "#FFFFFF") {
                     setCropColor("#000000")
                     setDisplayMovie(true)
@@ -166,8 +166,8 @@ function Visualizer() {
                     setDisplayMovie(false)
 
                   }
-                }} class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project Film</button></div>
-                <div class="p-2" style={aspectRatio == "1.43:1" ? {display: "block"} : {display:"none"}}><button onClick={() => {
+                }} className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project Film</button></div>
+                <div className="p-2" style={aspectRatio == "1.43:1" ? {display: "block"} : {display:"none"}}><button onClick={() => {
                   if ((!displayLaser)) {
                     setCropColor("#000000")
                     setDisplayLaser(true)
@@ -177,11 +177,11 @@ function Visualizer() {
                     setCropColor("#FFFFFF")
                     setDisplayLaser(false)
                   }
-                }} class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project 1.90:1</button></div>
+                }} className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project 1.90:1</button></div>
                 </div>
             
             
-          <div class="flex p-4">
+          <div className="flex p-4">
              <TableofProjDetails theaterSelected={scName}></TableofProjDetails>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, forwardRef } from 'react'
 import './Landing.css'
 import oppenheimer_still239 from './images/oppenheimer_still_239.jpg';
 import oppenheimer_still190 from './images/oppenheimer_still_190.jpg';
@@ -8,21 +8,20 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-function ARExamples() {
+const ARExamples = forwardRef((props, ref) => {
   const [count, setCount] = useState(0)
-
+ 
   return (
-    <>
-      <div class="flex flex-grow bg-white flex-col font-sans pt-5">
-        <div class="flex flex-grow flex-col text-black">
-          <h1 class="text-[2rem]">
+      <div className="flex max-w-screen bg-[#051E36] flex-col font-sans">
+        <div ref={ref} className="flex flex-grow flex-col text-white">
+          <h1 className="text-[2rem]">
             <b>Aspect Ratios</b>
           </h1>
-          <p class="text-m">
+          <p className="text-m">
             The various aspect ratios that many films offer.
           </p>
         </div>
-        <div class=" flex flex-grow justify-center items-center flex-col p-4 gap-4">
+        <div className=" flex max-w-screen justify-center items-center flex-row p-4 gap-4">
           <Card sx={{ maxWidth: 540, padding: 5}}>
           <CardMedia
             sx={{ height: 270 }}
@@ -70,25 +69,23 @@ function ARExamples() {
           </Card>
         </div>
         
-            {/* <div class="flex flex-row items center justify-center gap-2 p-2">
-              <div class="text-[1rem] flex flex-col">
-                <h1 class="text-l">2.39:1</h1>
-                <img class="aspect-auto" src={oppenheimer_still239}></img>
+            {/* <div className="flex flex-row items center justify-center gap-2 p-2">
+              <div className="text-[1rem] flex flex-col">
+                <h1 className="text-l">2.39:1</h1>
+                <img className="aspect-auto" src={oppenheimer_still239}></img>
               </div>
-              <div class="text-[1rem] flex flex-col">
-                <h1 class="text-l" >1.90:1</h1>
-                <img class="aspect-auto" src={oppenheimer_still190}></img>
+              <div className="text-[1rem] flex flex-col">
+                <h1 className="text-l" >1.90:1</h1>
+                <img className="aspect-auto" src={oppenheimer_still190}></img>
               </div>
-              <div class="text-[1rem] flex flex-col">
-                <h1 class="text-l">1.43:1</h1>
-                <img class="aspect-auto" src={oppenheimer_still}></img>
+              <div className="text-[1rem] flex flex-col">
+                <h1 className="text-l">1.43:1</h1>
+                <img className="aspect-auto" src={oppenheimer_still}></img>
               </div>
             </div> */}
 
         </div>
-
-    </>
-  )
-}
+  );
+})
 
 export default ARExamples;

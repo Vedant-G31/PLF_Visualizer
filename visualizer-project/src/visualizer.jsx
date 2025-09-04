@@ -7,7 +7,7 @@ import Video from './filmProjection';
 
 import MIF_AR from './images/MIF_AR.mp4';
 import tdkIMAX from './images/tdkIMAXtrim.mp4'
-
+import Person from './images/person.png'
 
 
 import useImage from 'use-image';
@@ -32,7 +32,7 @@ function Visualizer() {
   const [cropColor, setCropColor] = useState("#FFFFFF")
   const [displayMovie, setDisplayMovie] = useState(false)
   const [displayLaser, setDisplayLaser] = useState(false)
-  
+  const [personImage] = useImage(Person)
   
   var screenWidth = (parseInt((convertStrtoNumbers(scWidth))[0]) + (parseInt((convertStrtoNumbers(scWidth))[1]))/12)*(scaleMultiplier)
   var screenHeight = (parseInt((convertStrtoNumbers(scHeight))[0]) + (parseInt((convertStrtoNumbers(scHeight))[1]))/12)*(scaleMultiplier)
@@ -88,21 +88,6 @@ function Visualizer() {
                 </div>
                   <div className="flex flex-col flex-shrink lg:flex-grow items-center justify-center bg-[#051e46] text-white pl-4 pr-4 pt-8">
                     <div><h1 className="flex p-4 font-bold text-2xl">{(scName == "Select Screen") ? "Select Theater" : (screenWidth == 0 || screenHeight == 0) ? "Data not available" : scName}</h1></div>
-                          {/* <Stage width={screenWidth + 30} height={70}>
-                            <Layer>
-                                <Text
-                                      width={100}
-                                      x = {0}
-                                      y = {0}
-                                      text = {scName}
-                                      align="center"
-                                      fontSize = {30}
-                                      fontFamily = "Calibri"
-                                      wrap="word"
-                                      fill = "white"
-                                    />
-                              </Layer>
-                          </Stage> */}
                           <Stage width={screenWidth + 10} height={screenHeight + 10} scaleX={stageSize.scale} scaleY={stageSize.scale}>
                               <Layer>
                                   <Rect
@@ -135,6 +120,9 @@ function Visualizer() {
                                   stroke="white"
                                   strokeWidth={0}
                                 />
+                            </Layer>
+                            <Layer>
+                              <Image image={personImage} x={screenWidth/2 - (6*scaleMultiplier)/2} y={0} width={5*scaleMultiplier} height={6*scaleMultiplier}/>
                             </Layer>
                             <Layer>
                               <Text

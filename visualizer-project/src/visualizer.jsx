@@ -100,10 +100,10 @@ function Visualizer() {
                                   strokeWidth={1.25}
                                   visible={(screenWidth == 0 || screenHeight == 0) ? false : true}
                                   />
-                                  <Video src={((aspectRatio == "1.90:1" && displayMovie) || (displayLaser)) ? MIF_AR : tdkIMAX} x={0} y={(displayLaser ? ((screenHeight*0.125)) : 0)} videoWidth={screenWidth} videoHeight={(aspectRatio == "1.90:1") ? screenHeight : (displayLaser) ? (screenHeight*0.75) : screenHeight} displayMovie={displayMovie}></Video>
+                                  <Video src={(aspectRatio == "1.90:1" && displayMovie)  ? MIF_AR : tdkIMAX} x={0} y={0} videoWidth={screenWidth} videoHeight={screenHeight} displayMovie={displayMovie}></Video>
                             </Layer>
                           </Stage>
-                          <Stage visible={(screenWidth == 0 || screenHeight == 0) ? false : true} width={screenWidth} height={displayMovie ? ((stageSize.height)/2 + 40) : (stageSize.height)/2}>
+                          <Stage visible={(screenWidth == 0 || screenHeight == 0) ? false : true} width={screenWidth} height={(stageSize.height)/2}>
                             <Layer>
                                 {/* <Image image={auditoriumImage} x={stageWidth/2 - screenWidth/2} y={50} width={screenWidth} height={200}/> */}
                                 <Shape
@@ -124,20 +124,6 @@ function Visualizer() {
                             <Layer>
                               <Image image={personImage} x={screenWidth/2 - (6*scaleMultiplier)/2} y={0} width={5*scaleMultiplier} height={6*scaleMultiplier}/>
                             </Layer>
-                            <Layer>
-                              <Text
-                                  visible={displayMovie ? (true) : false}
-                                  width={screenWidth}
-                                  x = {0}
-                                  y = {stageSize.height/2 + 10}
-                                  text = {"**Movie footage belongs to its respective copyright owners. This project is a non-commercial visualization tool intended to illustrate screen formats (1.90:1 vs 1.43:1) for educational purposes."}
-                                  align="center"
-                                  fontSize = {10}
-                                  fontFamily = "Calibri"
-                                  wrap="word"
-                                  fill = "white"
-                                />
-                            </Layer>
                           </Stage>
                       {/* <h1 className="flex flex-wrap p-4 max-width-20 text-10" style={!displayMovie ? {display:"none"} : {display:"block"}}>Movie footage belongs to its respective copyright owners. This project is a non-commercial visualization tool intended to illustrate screen formats (1.90:1 vs 1.43:1) for educational purposes.</h1> */}
                       <div className="flex flex-row justify-center items-center">
@@ -145,24 +131,13 @@ function Visualizer() {
                             if (!displayMovie && cropColor == "#FFFFFF") {
                               setCropColor("#000000")
                               setDisplayMovie(true)
-                              setDisplayLaser(false)
                             } else {
                               setCropColor("#FFFFFF")
                               setDisplayMovie(false)
-
                             }
                           }} className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project Film</button></div>
-                          <div className="p-2" style={aspectRatio == "1.43:1" ? {display: "block"} : {display:"none"}}><button onClick={() => {
-                            if ((!displayLaser)) {
-                              setCropColor("#000000")
-                              setDisplayLaser(true)
-                              
-                              console.log("Yeet")
-                            } else {
-                              setCropColor("#FFFFFF")
-                              setDisplayLaser(false)
-                            }
-                          }} className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project 1.90:1</button></div>
+                          <div className="p-2" style={aspectRatio == "1.43:1" ? {display: "block"} : {display:"none"}}>
+                            <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project 1.90:1</button></div>
                     </div>
                 
                 

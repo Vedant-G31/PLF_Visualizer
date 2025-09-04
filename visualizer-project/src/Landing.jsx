@@ -33,7 +33,7 @@ function LandingPage({sectionRef}) {
 
           </div>
           <div className="p-5 ">
-            <button onClick={handleClick} className="  hover:bg-[#99DFFF] bg-[#0079BA]  text-white font-bold py-2 px-4 rounded">V</button>
+            <button onClick={handleClick} className="  hover:bg-[#99DFFF] bg-[#0079BA]  text-white font-bold py-2 px-4 rounded">Continue</button>
           </div>
 
         </div>

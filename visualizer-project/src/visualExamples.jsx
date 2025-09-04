@@ -12,7 +12,7 @@ const ARExamples = forwardRef((props, ref) => {
   const [count, setCount] = useState(0)
  
   return (
-      <div className="flex max-w-screen bg-[#051E36] flex-col font-sans">
+      <div className="flex max-w-screen bg-linear-to-t from-[#093477] to-[#051E36] flex-col font-sans">
         <div ref={ref} className="flex flex-grow flex-col text-white">
           <h1 className="text-[2rem]">
             <b>Aspect Ratios</b>
@@ -83,7 +83,9 @@ const ARExamples = forwardRef((props, ref) => {
                 <img className="aspect-auto" src={oppenheimer_still}></img>
               </div>
             </div> */}
-
+          <div className='flex justify-center'>
+            <h1 className='p-4 font-bold text-2xl text-white'>Premium Large Format Theater Visualizer</h1>
+          </div>
         </div>
   );
 })

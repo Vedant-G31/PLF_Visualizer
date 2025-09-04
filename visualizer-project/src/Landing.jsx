@@ -22,7 +22,7 @@ function LandingPage({sectionRef}) {
               <source type="video/mp4" />
               Your browser does not support the video tag.
           </video>
-        <div className="relative z-10 flex flex-grow items-center justify-center h-full flex-col text-white shadow-xl/40 bg-linear-to-t from-[#051E36] via-[#0F4E8C] to-transparent">
+        <div className="relative z-10 flex flex-grow items-center justify-center h-full flex-col text-white shadow-xl/40 bg-linear-to-t from-[#051E36] via-[#07295F] to-transparent">
           <h1 className="text-[10rem]">
             <b>P.L.F</b> Visualizer
           </h1>

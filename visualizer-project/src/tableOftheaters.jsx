@@ -10,14 +10,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import canadaTheaters from './theaters/canada.json'
 
-// function screenWidth(width) {
-//     console.log(width)
-// }
-
-// function screenHeight(height) {
-//     console.log(height)
-// }
-
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
   [`&.${tableCellClasses.head}`]: {
@@ -36,15 +28,15 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 const StyledTableRow = styled(TableRow)(({ theme, selected }) => ({
      
     '&:hover': {
-        backgroundColor: '#24b3f0ff !important',
+        backgroundColor: '#0d6dfdff !important',
         fontWeight: 500
     },
-    ...(selected && {backgroundColor: "#0cacecff !important",})
+    ...(selected && {backgroundColor: "#0d6dfdff !important",})
 }));
 function TableofTheaters({onTheaterHeight, onTheaterWidth, onTheaterName, theaterSelected, onAspectRatio}) {
     return(
         <div>
-            <TableContainer component={Paper} sx={{background: "linear-gradient(to right, #0d47a1, #2196f3)"}}>
+            <TableContainer component={Paper} sx={{background: "linear-gradient(to right, #0d47a1, #0d47a1)"}}>
                 <Table sx={{ minWidth: 400}} size="small" aria-label="customized table">
                     <TableHead>
                         <TableRow>

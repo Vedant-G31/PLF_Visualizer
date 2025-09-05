@@ -47,7 +47,6 @@ function Visualizer() {
 
   // Reference to parent container
   const containerRef = useRef(null);
-  
   // Function to handle resize
   const updateSize = () => {
     if (!containerRef.current) return;
@@ -79,14 +78,14 @@ function Visualizer() {
   /*every 10 units is 1 ft?*/
   return (
     <>
-        <div className='flex bg-[#093477] '>
+        <div className='flex flex-col lg:flex-row bg-[#093477] '>
                 <div className="flex flex-col justify-center flex-shrink lg:flex-grow items-center text-white shadow-xl/40 bg-linear-to-t from-[#051e46] to-[#093477]">
-                  <h1 className="flex p-4 font-bold text-2xl">List of Theaters (Canada)</h1>
-                  <div className="flex pl-4 pr-4 pb-4">
+                  <h1 className="p-4 font-bold text-2xl">List of Theaters (Canada)</h1>
+                  <div className="pl-4 pr-4 pb-4">
                       <TableofTheaters theaterSelected={scName} onTheaterHeight={setScreenHeight} onTheaterWidth={setScreenWidth} onTheaterName={setScreenName} onAspectRatio={setAspectRatio}></TableofTheaters>
                   </div>
                 </div>
-                  <div className="flex flex-col flex-shrink lg:flex-grow items-center justify-center bg-[#051e46] text-white pl-4 pr-4 pt-8">
+                  <div className="flex flex-col flex-shrink items-center justify-center bg-[#051e46] text-white pl-4 pr-4 pt-8">
                     <div><h1 className="flex p-4 font-bold text-2xl">{(scName == "Select Screen") ? "Select Theater" : (screenWidth == 0 || screenHeight == 0) ? "Data not available" : scName}</h1></div>
                           <Stage width={screenWidth + 10} height={screenHeight + 10} scaleX={stageSize.scale} scaleY={stageSize.scale}>
                               <Layer>
@@ -136,8 +135,8 @@ function Visualizer() {
                               setDisplayMovie(false)
                             }
                           }} className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project Film</button></div>
-                          <div className="p-2" style={aspectRatio == "1.43:1" ? {display: "block"} : {display:"none"}}>
-                            <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project 1.90:1</button></div>
+                          {/* <div className="p-2" style={aspectRatio == "1.43:1" ? {display: "block"} : {display:"none"}}>
+                            <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Project 1.90:1</button></div> */}
                     </div>
                 
                 

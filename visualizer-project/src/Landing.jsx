@@ -17,26 +17,29 @@ function LandingPage({sectionRef}) {
   return (
     <>
       
-      <div className="relative w-full h-screen overflow-hidden font-san  ">
-          <video className="absolute top-0 left-0 w-full h-full object-cover"src={IMAX_Countdown} muted autoPlay loop>
+      <div className="relative w-full h-screen overflow-hidden font-san ">
+          <video className="absolute top-[0] left-0 w-full h-full object-cover"src={IMAX_Countdown} muted autoPlay loop>
               <source type="video/mp4" />
               Your browser does not support the video tag.
           </video>
         <div className="relative z-10 flex flex-grow items-center justify-center h-full flex-col text-white shadow-xl/40 bg-linear-to-t from-[#051E36] via-[#07295F] to-transparent">
-          <h1 className="text-[10rem]">
+          <h1 className=" text-[5rem] md:text-[10rem]">
             <b>P.L.F</b> Visualizer
           </h1>
-          <div className='flex flex-shrink w-200'>
-            <p className="text-[2rem] text-wrap">
+          <div className='flex flex-col gap-4 flex-shrink w-100 md:w-200'>
+            <p className="text-[1rem] md:text-[2rem] text-wrap">
               A visualizer created to give a visual view of what your local theatre can present when it comes to premium large formats, mainly IMAX.
+            </p>
+             <p className="text-[1rem] md:text-[2rem] text-wrap">
+              Find out what aspect ratio your IMAX venue will offer as well as the type of projection they can offer.
             </p>
 
           </div>
           <div className="p-5 ">
             <button onClick={handleClick} className="  hover:bg-[#99DFFF] bg-[#0079BA]  text-white font-bold py-2 px-4 rounded">Continue</button>
           </div>
-
         </div>
+        
       </div>
 
     </>

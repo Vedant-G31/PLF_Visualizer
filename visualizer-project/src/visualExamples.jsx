@@ -10,7 +10,7 @@ import supermanPoster from './images/supermanIMAX.jpg'
 const ARExamples = forwardRef((props, ref) => {
  
   return (
-      <div className="flex justify-center items-center gap-4 bg-linear-to-t from-[#093477] to-[#051E36] flex-col font-sans">
+      <div className="flex justify-center items-center gap-4 pb-8 bg-linear-to-t from-[#093477] to-[#051E36] flex-col font-sans">
         
         <div ref={ref} className="flex flex-grow flex-col text-white">
           <h1 className="text-[2rem]">
@@ -64,9 +64,9 @@ const ARExamples = forwardRef((props, ref) => {
 
         </div>
        
-        <div className='flex justify-center'>
+        {/* <div className='flex justify-center'>
           <h1 className='p-4 font-bold text-2xl text-white'>Premium Large Format Theater Visualizer</h1>
-        </div>
+        </div> */}
 
         </div>
   );

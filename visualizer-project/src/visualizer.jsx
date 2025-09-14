@@ -45,52 +45,22 @@ function Visualizer() {
     scale: 1
   })
 
-  // Reference to parent container
-  const containerRef = useRef(null);
-  // Function to handle resize
-  const updateSize = () => {
-    if (!containerRef.current) return;
-    
-    // Get container width
-    const containerWidth = containerRef.current.offsetWidth;
-    
-    // Calculate scale
-    const scale = containerWidth / sceneWidth;
-    
-    // Update state with new dimensions
-    setStageSize({
-      width: sceneWidth * scale,
-      height: sceneHeight * scale,
-      scale: scale
-    });
-  };
-  
-  // Update on mount and when window resizes
-  useEffect(() => {
-    updateSize();
-    window.addEventListener('resize', updateSize);
-    
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    };
-  }, []);
-
   /*every 10 units is 1 ft?*/
   return (
     <>
         <div className='flex flex-col lg:flex-row bg-[#093477] '>
-                <div className="flex flex-col justify-center flex-shrink lg:flex-grow items-center text-white shadow-xl/40 bg-linear-to-t from-[#051e46] to-[#093477]">
+                <div className="flex flex-col justify-center lg:flex-grow items-center text-white shadow-xl/40 bg-linear-to-t from-[#051e46] to-[#093477]">
                   <h1 className="p-4 font-bold text-2xl">List of Theaters (Canada)</h1>
                   <div className="pl-4 pr-4 pb-4">
                       <TableofTheaters theaterSelected={scName} onTheaterHeight={setScreenHeight} onTheaterWidth={setScreenWidth} onTheaterName={setScreenName} onAspectRatio={setAspectRatio}></TableofTheaters>
                   </div>
                 </div>
-                  <div className="flex flex-col flex-shrink items-center justify-center bg-[#051e46] text-white pl-4 pr-4 pt-8">
-                    <div><h1 className="flex p-4 font-bold text-2xl">{(scName == "Select Screen") ? "Select Theater" : (screenWidth == 0 || screenHeight == 0) ? "Data not available" : scName}</h1></div>
+                  <div className="flex flex-col items-center justify-center bg-[#051e46] text-white pl-4 pr-4 pt-8">
+                    <div><h1 className="flex p-4 flex-shrink font-bold text-2xl">{(scName == "Select Screen") ? "Select Theater" : (screenWidth == 0 || screenHeight == 0) ? "Data not available" : scName}</h1></div>
                           <Stage width={screenWidth + 10} height={screenHeight + 10} scaleX={stageSize.scale} scaleY={stageSize.scale}>
                               <Layer>
                                   <Rect
-                                  x={0}
+                                  x={10}
                                   y={0}
                                   width={screenWidth}
                                   height={screenHeight}
@@ -99,10 +69,10 @@ function Visualizer() {
                                   strokeWidth={1.25}
                                   visible={(screenWidth == 0 || screenHeight == 0) ? false : true}
                                   />
-                                  <Video src={(aspectRatio == "1.90:1" && displayMovie)  ? MIF_AR : tdkIMAX} x={0} y={0} videoWidth={screenWidth} videoHeight={screenHeight} displayMovie={displayMovie}></Video>
+                                  <Video src={(aspectRatio == "1.90:1" && displayMovie)  ? MIF_AR : tdkIMAX} x={10} y={0} videoWidth={screenWidth} videoHeight={screenHeight} displayMovie={displayMovie}></Video>
                             </Layer>
                           </Stage>
-                          <Stage visible={(screenWidth == 0 || screenHeight == 0) ? false : true} width={screenWidth} height={(stageSize.height)/2}>
+                          <Stage visible={(screenWidth == 0 || screenHeight == 0) ? false : true} width={screenWidth} height={(stageSize.height)/2} scaleX={stageSize.scale} scaleY={stageSize.scale}>
                             <Layer>
                                 {/* <Image image={auditoriumImage} x={stageWidth/2 - screenWidth/2} y={50} width={screenWidth} height={200}/> */}
                                 <Shape

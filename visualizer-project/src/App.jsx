@@ -5,7 +5,7 @@ import './App.css'
 import LandingPage from './Landing'
 import ARExamples from './visualExamples'
 import Visualizer from './visualizer'
-
+import Footer from './Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +16,7 @@ function App() {
       <LandingPage sectionRef={sectionRef}></LandingPage>
       <ARExamples ref={sectionRef}></ARExamples>
       <Visualizer></Visualizer>
+      <Footer></Footer>
 
 
     </>

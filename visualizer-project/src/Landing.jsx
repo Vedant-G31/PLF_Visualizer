@@ -1,11 +1,8 @@
 import { useState, useRef } from 'react'
 import './Landing.css'
 
-import landingvideo from './images/landingvideo.mp4';
-import countdown from './images/countdown.mp4';
 import IMAX_Countdown_Trim from './images/IMAX_Countdown_trim.mp4'
-import MIF_AR from './images/MIF_AR.mp4'
-import Rocket from './images/rocket.mp4'
+
 
 
 

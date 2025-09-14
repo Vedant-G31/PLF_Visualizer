@@ -3,8 +3,9 @@ import './Landing.css'
 
 import landingvideo from './images/landingvideo.mp4';
 import countdown from './images/countdown.mp4';
-import IMAX_Countdown from './images/IMAX_countdown.mp4'
+import IMAX_Countdown_Trim from './images/IMAX_Countdown_trim.mp4'
 import MIF_AR from './images/MIF_AR.mp4'
+import Rocket from './images/rocket.mp4'
 
 
 
@@ -18,7 +19,7 @@ function LandingPage({sectionRef}) {
     <>
       
       <div className="relative w-full h-screen overflow-hidden font-san ">
-          <video className="absolute top-[0] left-0 w-full h-full object-cover"src={IMAX_Countdown} muted autoPlay loop>
+          <video className="absolute top-[0] left-0 w-full h-full object-cover"src={IMAX_Countdown_Trim} muted autoPlay loop>
               <source type="video/mp4" />
               Your browser does not support the video tag.
           </video>

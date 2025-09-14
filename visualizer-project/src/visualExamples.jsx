@@ -28,8 +28,8 @@ const ARExamples = forwardRef((props, ref) => {
                 <img src={bvsStandard} alt={"BVS Standard Aspect Ratio Still"}></img>
               </div>
               <div>
-                <h1 className='text-left text-[2rem]'>2.40:1 or 2.39:1</h1>
-                <p className='text-left text-[1rem]'>This is the standard aspect ratio. It's the most common widescreen format you can watch a film in. Sometimes IMAX film releases can limit to the standard aspect ratio. On the exclusive IMAX posters for those films would state "Experience it in IMAX." It is also often projected in laser at the film venue.</p>
+                <h1 className='text-center md:text-left text-[2rem]'>2.40:1/2.39:1/1.85:1 (Standard Widescreen)</h1>
+                <p className='text-center md:text-left text-[1rem]'>These are the standard aspect ratios. It's the most common widescreen format you can watch a film in. Sometimes IMAX film releases are limited to these ratios, and the exclusive IMAX posters for those films would say "Experience it in IMAX." It is also often projected using laser projection at theaters.</p>
               </div>
               <div className=' w-60 md:w-110'>
                 <img src={twistersPoster} alt={"twisters poster"}></img>
@@ -37,12 +37,12 @@ const ARExamples = forwardRef((props, ref) => {
           </div>
 
             <div className='flex flex-col md:flex-row items-center justify-center gap-4 bg-linear-to-t from-[#072C4F] to-[#0541A1] border-2 border-solid border-white text-white rounded-xl p-4'>
-              <div className='w-70 md:w-250'>
-                <img src={bvs190} alt={"BVS Standard Aspect Ratio Still"}></img>
+              <div className='w-70 md:w-255'>
+                <img src={bvs190} alt={"BVS Digital IMAX Aspect Ratio Still"}></img>
               </div>
               <div>
-                <h1 className='text-left text-[2rem]'>1.90:1</h1>
-                <p className='text-left text-[1rem]'>This is the common IMAX aspect ratio. It's digital and it is often for films specifically shot with IMAX certified digital cameras or a 1:43.1 film being cropped to fit the 1.90:1. Most IMAX venues offers this format in lasers and films posters would be labeled as "Filmed for IMAX"</p>
+                <h1 className='text-center md:text-left text-[2rem]'>1.90:1 (Digital IMAX)</h1>
+                <p className='text-center md:text-left text-[1rem]'>This is the common IMAX aspect ratio. It's digital, usually for jilms specifically shot with IMAX certified digital cameras or for a 1:43.1 film cropped to fit the 1.90:1 frame. Most IMAX venues offers this format in laser projection and posters for these films are typically labeled "Filmed for IMAX"</p>
               </div>
               <div className='w-55 md:w-100'>
                 <img src={supermanPoster} alt={"superman poster"}></img>
@@ -50,12 +50,12 @@ const ARExamples = forwardRef((props, ref) => {
           </div>
           
           <div className='flex flex-col md:flex-row items-center justify-center gap-4 bg-linear-to-t from-[#072C4F] to-[#0541A1] border-2 border-solid border-white text-white rounded-xl p-4'>
-              <div className='w-70 md:w-400'>
-                <img src={bvs143} alt={"BVS Standard Aspect Ratio Still"}></img>
+              <div className='w-70 md:w-360'>
+                <img src={bvs143} alt={"BVS 1.43:1 Aspect Ratio Still"}></img>
               </div>
               <div>
-                <h1 className='text-left text-[2rem]'>1.43:1</h1>
-                <p className='text-left text-[1rem]'>This is the definitive IMAX format. However, it usually rare to get a film specifically shot on 70mm IMAX film with the aspect ratio. In the last few years, Christopher Nolan, Denis Villeneueve, and Ryan Coogler has heavily pushed for this format to be the best format to watch any movie in. But the venues for projecting this format is very sparse. Especially in Canada. Film IMAX exclusive posters would state that it is "Shot with IMAX Cameras"</p>
+                <h1 className='text-center md:text-left text-[2rem]'>1.43:1 (IMAX 70mm)</h1>
+                <p className='text-center md:text-left text-[1rem]'>This is the definitive IMAX format. It is rare for a film to be shot on 70mm IMAX film with the aspect ratio. In the last few years, Christopher Nolan, Denis Villeneueve, and Ryan Coogler have pushed for this format to be the ultimate way to watch a movie in. But only very few venues can actually project this, especially in Canada. Posters for films in this format state that it is "Shot with IMAX Cameras"</p>
               </div>
               <div className='w-55 md:w-160'>
                 <img src={oppenheimerPoster} alt={"oppenheimer poster"}></img>

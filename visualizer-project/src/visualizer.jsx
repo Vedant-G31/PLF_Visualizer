@@ -5,7 +5,7 @@ import TableofTheaters from './tableOftheaters';
 import TableofProjDetails from './projectionDetails';
 import Video from './filmProjection';
 
-import MIF_AR from './images/MIF_AR.mp4';
+import MIF_AR from './images/MIF_AR_compressed.mp4';
 import tdkIMAX from './images/tdkIMAXtrim.mp4'
 import Person from './images/person.png'
 

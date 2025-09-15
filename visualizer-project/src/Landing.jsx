@@ -2,6 +2,7 @@ import { useState, useRef } from 'react'
 import './Landing.css'
 
 import IMAX_Countdown_Trim from './images/IMAX_Countdown_Trim.mp4'
+import lightspeed from './images/lightspeed_compressed.mp4'
 
 
 
@@ -16,7 +17,7 @@ function LandingPage({sectionRef}) {
     <>
       
       <div className="relative w-full h-screen overflow-hidden font-san bg-[#000000] ">
-          <video className="absolute top-[0] left-0 w-full h-full object-cover"src={IMAX_Countdown_Trim} muted autoPlay loop>
+          <video className="absolute top-[0] left-0 w-full h-full object-cover"src={lightspeed} muted autoPlay loop>
               <source type="video/mp4" />
               Your browser does not support the video tag.
           </video>

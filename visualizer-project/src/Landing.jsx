@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import './Landing.css'
 
-import IMAX_Countdown_Trim from './images/IMAX_Countdown_trim.mp4'
+import IMAX_Countdown_Trim from './images/IMAX_Countdown_Trim.mp4'
 
 
 

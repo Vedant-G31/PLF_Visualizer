@@ -48,14 +48,14 @@ function Visualizer() {
   /*every 10 units is 1 ft?*/
   return (
     <>
-        <div className='flex flex-col lg:flex-row bg-[#093477] '>
-                <div className="flex flex-col justify-center lg:flex-grow items-center text-white shadow-xl/40 bg-linear-to-t from-[#051e46] to-[#093477]">
+        <div className='flex flex-col flex-grow lg:flex-row bg-[#093477] '>
+                <div className="flex flex-col justify-center items-center text-white shadow-xl/40 bg-linear-to-t from-[#051e46] to-[#093477]">
                   <h1 className="p-4 font-bold text-2xl">List of Theaters (Canada)</h1>
-                  <div className="pl-4 pr-4 pb-4">
+                  <div className="pl-4 overflow-hidden w-full pr-4 pb-4">
                       <TableofTheaters theaterSelected={scName} onTheaterHeight={setScreenHeight} onTheaterWidth={setScreenWidth} onTheaterName={setScreenName} onAspectRatio={setAspectRatio}></TableofTheaters>
                   </div>
                 </div>
-                  <div className="flex flex-col items-center justify-center bg-[#051e46] text-white pl-4 pr-4 pt-8">
+                  <div className="flex overflow-hidden flex-col flex-grow items-center justify-center bg-[#051e46] text-white pl-4 pr-4 pt-8">
                     <div><h1 className="flex p-4 flex-shrink font-bold text-2xl">{(scName == "Select Screen") ? "Select Theater" : (screenWidth == 0 || screenHeight == 0) ? "Data not available" : scName}</h1></div>
                           <Stage width={screenWidth + 10} height={screenHeight + 10} scaleX={stageSize.scale} scaleY={stageSize.scale}>
                               <Layer>

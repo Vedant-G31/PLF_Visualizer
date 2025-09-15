@@ -15,13 +15,19 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: "#032651ff",
     color: theme.palette.common.white,
-    fontSize: 11
-
+    fontSize: 11,
+    [theme.breakpoints.up("xs")]: { fontSize: "0.35rem" },
+    [theme.breakpoints.up("sm")]: { fontSize: "0.6rem" },
+    [theme.breakpoints.up("md")]: { fontSize: "0.8rem" },
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 11,
     backgroundColor: "transparent",
-    color: "#ffffffff"
+    color: "#ffffffff",
+    [theme.breakpoints.up("xs")]: { fontSize: "0.35rem" },
+    [theme.breakpoints.up("sm")]: { fontSize: "0.6rem" },
+    [theme.breakpoints.up("md")]: { fontSize: "0.8rem" },
+
   },
 }));
 
@@ -36,8 +42,8 @@ const StyledTableRow = styled(TableRow)(({ theme, selected }) => ({
 function TableofTheaters({onTheaterHeight, onTheaterWidth, onTheaterName, theaterSelected, onAspectRatio}) {
     return(
         <div>
-            <TableContainer component={Paper} sx={{background: "linear-gradient(to right, #0d47a1, #0d47a1)"}}>
-                <Table sx={{ minWidth: 400}} size="small" aria-label="customized table">
+            <TableContainer component={Paper} sx={{background: "linear-gradient(to right, #0d47a1, #0d47a1)", maxHeight: { xs: 800, md: "none" }}}>
+                <Table size="small" aria-label="customized table">
                     <TableHead>
                         <TableRow>
                             <StyledTableCell>Province</StyledTableCell>

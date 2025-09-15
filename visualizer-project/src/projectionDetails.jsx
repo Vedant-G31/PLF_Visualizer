@@ -15,13 +15,19 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: "#032651ff",
     color: theme.palette.common.white,
-    fontSize: 11
+    fontSize: 11,
+    [theme.breakpoints.up("xs")]: { fontSize: "0.5rem" },
+    [theme.breakpoints.up("sm")]: { fontSize: "0.6rem" },
+    [theme.breakpoints.up("md")]: { fontSize: "0.8rem" },
 
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 11,
     backgroundColor: "transparent",
-    color: "#ffffffff"
+    color: "#ffffffff",
+    [theme.breakpoints.up("xs")]: { fontSize: "0.5rem" },
+    [theme.breakpoints.up("sm")]: { fontSize: "0.6rem" },
+    [theme.breakpoints.up("md")]: { fontSize: "0.8rem" },
   },
   borderBottom: "none"
 }));
@@ -40,8 +46,8 @@ function TableofProjDetails({theaterSelected}) {
     const selectedTheater = canadaTheaters.filter((row) => row.Location_Name === theaterSelected)
     return (
         <div>
-            <TableContainer component={Paper} sx={{background: "#2196f3"}}>
-                <Table sx={{ minWidth: 400}} size="small" aria-label="customized table">
+            <TableContainer component={Paper} sx={{background: "#2196f3", maxWidth: "sm"}}>
+                <Table sx={{ minWidth: 100}} size="small" aria-label="customized table">
                     <TableHead>
                         <TableRow>
                             <StyledTableCell align="center">Aspect Ratio</StyledTableCell>

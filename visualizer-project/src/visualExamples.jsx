@@ -42,7 +42,7 @@ const ARExamples = forwardRef((props, ref) => {
               </div>
               <div>
                 <h1 className='text-center md:text-left text-[1.25rem] md:text-[2rem]'>1.90:1 (Digital IMAX)</h1>
-                <p className='text-center md:text-left text-[1rem]'>This is the common IMAX aspect ratio. It's digital, usually for jilms specifically shot with IMAX certified digital cameras or for a 1:43.1 film cropped to fit the 1.90:1 frame. Most IMAX venues offers this format in laser projection and posters for these films are typically labeled "Filmed for IMAX"</p>
+                <p className='text-center md:text-left text-[1rem]'>This is the common IMAX aspect ratio. It's digital, usually for films specifically shot with IMAX certified digital cameras or for a 1:43.1 film cropped to fit the 1.90:1 frame. Most IMAX venues offers this format in laser projection and posters for these films are typically labeled "Filmed for IMAX"</p>
               </div>
               <div className='w-55 md:w-100'>
                 <img src={supermanPoster} alt={"superman poster"}></img>
